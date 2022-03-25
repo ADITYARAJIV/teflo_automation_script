@@ -1,0 +1,43 @@
+provision:
+- name: add_volume1
+  provisioner: openstack-client
+  credential: openstack
+  server_add_volume:
+  - device: /dev/vdb
+    tgt_res: team_volume-1
+    res: team_node-1
+- name: add_volume2
+  provisioner: openstack-client
+  credential: openstack
+  server_add_volume:
+  - device: /dev/vdc
+    tgt_res: team_volume-2
+    res: team_node-1
+- name: add_volume3
+  provisioner: openstack-client
+  credential: openstack
+  server_add_volume:
+  - device: /dev/vdb
+    tgt_res: team_volume-3
+    res: team_node-2
+- name: add_volume4
+  provisioner: openstack-client
+  credential: openstack
+  server_add_volume:
+  - device: /dev/vdc
+    tgt_res: team_volume-4
+    res: team_node-2
+- name: add_volume5
+  provisioner: openstack-client
+  credential: openstack
+  server_add_volume:
+  - device: /dev/vdb
+    tgt_res: team_volume-5
+    res: team_node-4
+- name: add_volume6
+  provisioner: openstack-client
+  credential: openstack
+  server_add_volume:
+  - device: /dev/vdc
+    tgt_res: team_volume-6
+    res: team_node-4

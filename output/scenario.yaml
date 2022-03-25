@@ -1,0 +1,27 @@
+---
+
+name: provisioner-resource
+description: vm
+
+provision:
+  - name: team_volume
+    provisioner: openstack-client
+    volume:
+      max: 6
+      size: 5 
+    credential: openstack
+  - name: team_node
+    groups: client, test_driver
+    provisioner: openstack-client
+    credential: openstack
+    server:
+      max: 5
+      image: RHEL-8.5.0-x86_64-released
+      flavor: ci.m1.medium
+      network:
+        - provider_net_cci_8
+      key_name: os
+      
+    ansible_params:
+      ansible_user: cloud-user
+      ansible_ssh_private_key_file: keys/textkey

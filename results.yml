@@ -1,0 +1,164 @@
+name: provisioner-resource
+description: vm
+remote_workspace: []
+resource_check: {}
+provision:
+- name: team_volume-4
+  provisioner: openstack-client
+  volume:
+    max: 6
+    size: 5
+  asset_id: 2979af57-6ee1-48b7-929a-b443547311cb
+  ansible_params: {}
+  labels: []
+- name: team_node-5
+  groups:
+  - client
+  - test_driver
+  provisioner: openstack-client
+  server:
+    max: 5
+    image: RHEL-8.5.0-x86_64-released
+    flavor: ci.m1.medium
+    network:
+    - provider_net_cci_8
+    key_name: os
+  asset_id: 75b70652-8634-410d-a6cc-48694abf882b
+  ip_address:
+    public: 10.0.103.86
+  ansible_params:
+    ansible_user: cloud-user
+    ansible_ssh_private_key_file: keys/textkey
+  labels: []
+- name: team_node-3
+  groups:
+  - client
+  - test_driver
+  provisioner: openstack-client
+  server:
+    max: 5
+    image: RHEL-8.5.0-x86_64-released
+    flavor: ci.m1.medium
+    network:
+    - provider_net_cci_8
+    key_name: os
+  asset_id: 71334a7e-b712-4f2f-a8da-3d77a77ed40a
+  ip_address:
+    public: 10.0.103.15
+  ansible_params:
+    ansible_user: cloud-user
+    ansible_ssh_private_key_file: keys/textkey
+  labels: []
+- name: team_node-2
+  groups:
+  - client
+  - test_driver
+  provisioner: openstack-client
+  server:
+    max: 5
+    image: RHEL-8.5.0-x86_64-released
+    flavor: ci.m1.medium
+    network:
+    - provider_net_cci_8
+    key_name: os
+  asset_id: 7eeb37d9-6e42-4f49-9cef-95091848d31c
+  ip_address:
+    public: 10.0.101.50
+  ansible_params:
+    ansible_user: cloud-user
+    ansible_ssh_private_key_file: keys/textkey
+  labels: []
+- name: team_node-1
+  groups:
+  - client
+  - test_driver
+  provisioner: openstack-client
+  server:
+    max: 5
+    image: RHEL-8.5.0-x86_64-released
+    flavor: ci.m1.medium
+    network:
+    - provider_net_cci_8
+    key_name: os
+  asset_id: 9f986757-a865-4146-8a6e-14d2aafea980
+  ip_address:
+    public: 10.0.101.215
+  ansible_params:
+    ansible_user: cloud-user
+    ansible_ssh_private_key_file: keys/textkey
+  labels: []
+- name: team_node-4
+  groups:
+  - client
+  - test_driver
+  provisioner: openstack-client
+  server:
+    max: 5
+    image: RHEL-8.5.0-x86_64-released
+    flavor: ci.m1.medium
+    network:
+    - provider_net_cci_8
+    key_name: os
+  asset_id: 3fd09c60-edc0-4f60-9645-edcc1f35c83f
+  ip_address:
+    public: 10.0.101.1
+  ansible_params:
+    ansible_user: cloud-user
+    ansible_ssh_private_key_file: keys/textkey
+  labels: []
+- name: team_volume-2
+  provisioner: openstack-client
+  volume:
+    max: 6
+    size: 5
+  asset_id: 77ff6f1e-b2f6-4820-93ad-2915356cdc6c
+  ansible_params: {}
+  labels: []
+- name: team_volume-5
+  provisioner: openstack-client
+  volume:
+    max: 6
+    size: 5
+  asset_id: a9c093c5-6130-4538-9aff-e964c0f1f7c3
+  ansible_params: {}
+  labels: []
+- name: team_volume-3
+  provisioner: openstack-client
+  volume:
+    max: 6
+    size: 5
+  asset_id: 9ce5bdb3-58c2-474b-a319-dfa4620ac37b
+  ansible_params: {}
+  labels: []
+- name: team_volume-6
+  provisioner: openstack-client
+  volume:
+    max: 6
+    size: 5
+  asset_id: 196ca51a-7319-4dd2-8e92-1273dcbedbca
+  ansible_params: {}
+  labels: []
+- name: team_node
+  groups:
+  - client
+  - test_driver
+  provisioner: openstack-client
+  server:
+    max: 5
+    image: RHEL-8.5.0-x86_64-released
+    flavor: ci.m1.medium
+    network:
+    - provider_net_cci_8
+    key_name: os
+  ansible_params:
+    ansible_user: cloud-user
+    ansible_ssh_private_key_file: keys/textkey
+  labels: []
+orchestrate: []
+execute: []
+report: []
+notifications: []
+overall_status: 0
+passed_tasks:
+- provision
+failed_tasks: []
