@@ -66,8 +66,8 @@ if __name__ == "__main__":
 			l='b'
 			for j in range(1, v+1):
 				c+=1
-				volume_n1='teflo_vol'
-				node_n1='teflo_node'
+				volume_n1='team_volume'
+				node_n1='team_node'
 				name = 'add_volume'+str(c)
 				res_name = volume_n1+'-'+str(i)
 				vol_name = node_n1+'-'+str(c)
