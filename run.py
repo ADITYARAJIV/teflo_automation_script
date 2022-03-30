@@ -66,9 +66,11 @@ if __name__ == "__main__":
 			l='b'
 			for j in range(1, v+1):
 				c+=1
+				volume_n1='teflo_vol'
+				node_n1='teflo_node'
 				name = 'add_volume'+str(c)
-				res_name = 'team_node-'+str(i)
-				vol_name = 'team_volume-'+str(c)
+				res_name = volume_n1+'-'+str(i)
+				vol_name = node_n1+'-'+str(c)
 				dev_name = dev_skel+l
 				if c==1 :
 					data = {'provision':  [{'name':name,'provisioner': 'openstack-client','credential':'openstack','server_add_volume':  [{'device':dev_name, 'tgt_res':vol_name,'res':res_name}]}]}
@@ -80,7 +82,7 @@ if __name__ == "__main__":
 
 #***************dumping values into the variables in the scenario file******
 
-	file.write(temp.render(image=image1, flavor=flavor1, size=size1, maxim=c, ser_size=ser_size1))
+	file.write(temp.render(volume_n=volume_n1, node_n=node_n1, image=image1, flavor=flavor1, size=size1, maxim=c, ser_size=ser_size1))
 
 #***************************************************************************
 	file.close()
