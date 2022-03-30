@@ -4,13 +4,13 @@ name: provisioner-resource
 description: vm
 
 provision:
-  - name: team_volume
+  - name: {{volume_n}}
     provisioner: openstack-client
     volume:
       max: {{maxim}}
       size: {{size}} 
     credential: openstack
-  - name: team_node
+  - name: {{node_n}}
     groups: client, test_driver
     provisioner: openstack-client
     credential: openstack
