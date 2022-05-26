@@ -73,9 +73,11 @@ if __name__ == "__main__":
 				vol_name = node_n1+'-'+str(c)
 				dev_name = dev_skel+l
 				if c==1 :
-					data = {'provision':  [{'name':name,'provisioner': 'openstack-client','credential':'openstack','server_add_volume':  [{'device':dev_name, 'tgt_res':vol_name,'res':res_name}]}]}
+					data = {'provision':  [{'name':name,'provisioner': 'openstack-client','credential':'openstack','server_add_volume': 
+								[{'device':dev_name, 'tgt_res':vol_name,'res':res_name}]}]}
 				else :
-					data = [{'name':name,'provisioner': 'openstack-client','credential':'openstack','server_add_volume':  [{'device':dev_name, 'tgt_res':vol_name,'res':res_name}]}]
+					data = [{'name':name,'provisioner': 'openstack-client','credential':'openstack','server_add_volume':  
+						 [{'device':dev_name, 'tgt_res':vol_name,'res':res_name}]}]
 				yaml.dump(data,file2, default_flow_style=False, sort_keys=False)
 				l = chr(ord(l)+1)
 
